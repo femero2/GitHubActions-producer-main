@@ -15,7 +15,7 @@ spec:
       automountServiceAccountToken: false
       containers:
       - name: producer
-        image: acrpvb.azurecr.io/producer:latest
+        image: acrfmr.azurecr.io/producer:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
