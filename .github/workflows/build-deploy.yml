@@ -65,6 +65,9 @@ jobs:
           az aks get-credentials --resource-group $AZURE_RESOURCE_GROUP --name $AKS_NAME
 
       - name: Deploy to AKS
+        env:
+          ACR_NAME: ${{ secrets.ACR_NAME }}
         run: |
-          kubectl apply -f k8s/producer/ --overwrite
+          envsubst < k8s/producer/deployment.yaml | kubectl apply -f -
+          kubectl apply -f k8s/producer/service.yaml --overwrite
           kubectl apply -f k8s/rabbit-mq/ --overwrite
