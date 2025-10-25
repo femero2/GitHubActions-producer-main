@@ -27,8 +27,8 @@ spec:
           value: user
         resources:
           requests:
-            memory: "512Mi"
-            cpu: "500m"
+            cpu: 200m      # Reducido de 500m
+            memory: 256Mi  # Reducido de 512Mi
           limits:
-            memory: "1Gi"
-            cpu: "1"
+            cpu: 400m
+            memory: 512Mi
