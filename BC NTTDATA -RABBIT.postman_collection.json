@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "abc22fec-c1e4-446e-9e61-91b004445d0c",
+		"name": "BC NTTDATA -RABBIT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2644324"
+	},
+	"item": [
+		{
+			"name": "AKS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://172.179.162.40:8080/produce?message=Bootcamp67",
+					"protocol": "http",
+					"host": [
+						"172",
+						"179",
+						"162",
+						"40"
+					],
+					"port": "8080",
+					"path": [
+						"produce"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "Bootcamp67"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
